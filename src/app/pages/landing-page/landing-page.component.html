@@ -1,0 +1,23 @@
+
+
+
+<div class="row mt-3">
+  
+    <div class="col col-md-4">
+       <div *ngIf="email"style="margin: 212px 0px 0px 0px;">
+        <h4>{{email}}</h4>
+       
+        <p>Lets Search Repository</p>
+        <a class="btn btn-light text-secondary" (click)='handleClickTwo()'>Find</a>
+       </div>
+
+       <div  class="" style="margin: 212px 0px 0px 0px;" *ngIf="!email">
+        <h4 class="text-danger">Find GitHub Repository!!!</h4>
+        <P class="text-font-italic">Making searching easy & fast</P>
+        <a class="btn btn-light text-secondary" (click)='handleClick()'>Click here to login</a>
+       </div>
+    </div>
+    <div class="col col-md-8">
+        <img src="../../../assets/6463428.jpg" width="700" height="585" class=" " alt="">
+    </div>
+</div>

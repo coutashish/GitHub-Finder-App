@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary  ">
+    <a class="navbar-brand " [routerLink]="['/landpage']">
+      <img src="../../../assets/git2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      GitHub Finder 
+    </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse  " id="navbarNavAltMarkup"> -->
+      <div class="navbar-nav ml-auto   ">
+        <a class="nav-item nav-link "  [routerLink]="['/landpage']">Home</a>
+
+        <a class="nav-item nav-link " *ngIf="email" [routerLink]="['/']">Find</a>
+        <!-- conditionally rendering links  -->
+        <a class="nav-item nav-link " *ngIf="!email" [routerLink]="['/signin']" routerLinkActive="active">SignIn</a>
+        <a class="nav-item nav-link " *ngIf="!email" [routerLink]="['/signup']" routerLinkActive="active">SignUp</a>
+        <a class="nav-item nav-link " *ngIf="email" (click)='handleSignOut()'>Log Out</a>
+        <a class="nav-item nav-link "  [routerLink]="['/about']">About</a>
+      </div>
+      
+       <!-- if the user is present then printing email -->
+       <!-- <div *ngIf="email" class="navbar-text  float-right ">
+        {{email}} </div> -->
+
+    <!-- </div> -->
+  </nav>
